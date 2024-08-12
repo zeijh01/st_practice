@@ -5,6 +5,19 @@ import csv
 
 #폰트
 plt.rc('font',family='Malgun Gothic')
+st.markdown(
+    """
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+    html, body, [class*="css"]  {
+        font-family: 'Nanum Gothic', sans-serif;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 f= open('age.csv',encoding='cp949')
 data = csv.reader(f)
