@@ -6,7 +6,7 @@ import csv
 #폰트
 plt.rc('font',family='Malgun Gothic')
 
-f= open('age.csv')
+f= open('age.csv',encoding='cp949')
 data = csv.reader(f)
 header = next(data)
 data = list(data)
