@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np 
 from PIL import Image
-import opencv-python as cv2 
+import cv2 
 
 def dodgeV2(img, mask):  #두 이미지를 결합하여 하이라이트 부분을 강조
     return cv2.divide(img, 255 - mask, scale=256)
