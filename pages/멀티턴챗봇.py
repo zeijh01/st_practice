@@ -36,9 +36,9 @@ if prompt:
             'parts':prompt
         }) #기존 대화를 출력하기 위한 세션
         st.write(prompt)
-
-    response = model.generate_content(st.session_state.history)
-    st.session_state.history.append(response.candidates[0].content)
+    with st.spinner('기다려주세요...'):
+        response = model.generate_content(st.session_state.history)
+        st.session_state.history.append(response.candidates[0].content)
 
     with st.chat_message('ai'):
         st.session_state.talk.append({
