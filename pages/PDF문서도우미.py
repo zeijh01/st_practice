@@ -10,7 +10,7 @@ from langchain_core.output_parsers import StrOutputParser #7
 import streamlit as st
 from dotenv import load_dotenv
 import os
-
+load_dotenv()
 
 # 캐시 디렉토리 생성
 if not os.path.exists(".cache"):
