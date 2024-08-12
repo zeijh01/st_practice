@@ -1,10 +1,9 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+import koreanize_matplotlib
 import pandas as pd
 import csv
 
-#폰트
-plt.rc('font',family='Malgun Gothic')
 
 f= open('age.csv',encoding='cp949')
 data = csv.reader(f)
