@@ -11,11 +11,6 @@ import streamlit as st
 from dotenv import load_dotenv
 import os
 
-from pydantic import ValidationError
-
-
-
-
 
 # 캐시 디렉토리 생성
 if not os.path.exists(".cache"):
@@ -52,11 +47,8 @@ if uploaded_file is not None:
     split_documents = text_splitter.split_documents(pages)
 
     #step3 임베딩
+    embeddings_model = GoogleGenerativeAIEmbeddings(model='models/embedding-001')
 
-    try:
-        embeddings_model = GoogleGenerativeAIEmbeddings(model='models/embedding-001')
-    except ValidationError as e:
-        print(e)
     
 
     #step4 벡터 스토어
