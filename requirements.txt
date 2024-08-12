@@ -93,3 +93,4 @@ watchdog==4.0.2
 yarl==1.9.4
 opencv-python-headless
 koreanize_matplotlib
+
